@@ -20,7 +20,7 @@
         <reportName>Automation Report</reportName>
         
         <!-- report headline - displayed at top-nav, after reportHeadline -->
-        <reportHeadline></reportHeadline>
+        <reportHeadline>aaa</reportHeadline>
         
         <!-- global date format override -->
         <!-- defaults to yyyy-MM-dd -->

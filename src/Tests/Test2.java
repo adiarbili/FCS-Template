@@ -3,13 +3,14 @@ package Tests;
 
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
 public class Test2 extends BaseTest
 {	
+	/*
 	@Test (priority = 2)
 	public void clickSearchBtn()
 	{		
@@ -39,4 +40,35 @@ public class Test2 extends BaseTest
 				
 		logger.log(LogStatus.PASS, "Text was inserted properly");
 	}	
+	*/
+	
+	@Test //(priority = 1)
+	public void MclickButton()
+	{			
+		childTest = extentReport.startTest("Click on search button");
+		childTest.log(LogStatus.PASS, "Test2");
+	}
+	
+	@Test //(priority = 2)
+	public void insertText()
+	{	
+		childTest = extentReport.startTest("Insert text to input text");
+		assertEquals(true, false, "Enter.disable()");
+		childTest.log(LogStatus.PASS, "Insert \" Adi Arbili \" to input text");
+	}
+	
+	@Test //(priority = 2)
+	public void insertText3()
+	{	
+		childTest = extentReport.startTest("Insert text to input text");
+		assertEquals(true, false, "Enter.disable()");
+		childTest.log(LogStatus.PASS, "Insert \" Adi Arbili \" to input text");
+	}	
+	
+	@BeforeClass(alwaysRun = true)
+	public void search()
+	{			
+		mainTest = extentReport.startTest("Test2");
+	}
+
 }
